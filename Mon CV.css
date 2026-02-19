@@ -1,0 +1,404 @@
+/* ===========================
+   Police et fond général
+   =========================== */
+   body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f5f5; /* Gris très clair pour briser le blanc pur */
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  /* ===========================
+     Header avec dégradé et liens réseaux
+     =========================== */
+  header {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(90deg, #1a73e8, #4285f4);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.2em;
+  }
+  
+  header p {
+    margin: 5px 0;
+  }
+  
+  /* Style spécifique pour les liens réseaux */
+  .liens-reseaux a {
+      color: #fff;
+      font-weight: bold;
+      margin: 0 10px;
+  }
+  
+  header a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  header a:hover {
+      text-decoration: underline;
+  }
+  
+  /* ===========================
+     Photo ronde
+     =========================== */
+  .photo-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #1a73e8;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  }
+  
+  /* ===========================
+     Profil centré
+     =========================== */
+  .profile {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #e8f0fe;
+    padding: 25px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    border-top: 5px solid #1a73e8;
+  }
+  
+  .profile p strong {
+      font-weight: 700;
+      color: #0b3d91;
+  }
+  
+  /* ===========================
+     Conteneur principal : 3 colonnes
+     =========================== */
+  .cv-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+  
+  /* ===========================
+     Colonnes : ajustement des largeurs et séparateur
+     =========================== */
+  .left-col { 
+      flex: 1; 
+      padding-right: 25px;
+  }
+  .center-col { flex: 2; }
+  .right-col { 
+      flex: 1; 
+      border-left: 2px solid #dbe9fd; /* Séparateur visuel pour séparer right-col de center-col */
+      padding-left: 25px;
+  }
+  
+  /* Styles de base des colonnes */
+  .left-col, .center-col, .right-col {
+    background: #f7f9fc;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  }
+  
+  /* ===========================
+     Titres des sections avec icône Font Awesome (::before)
+     =========================== */
+  h2 {
+    color: #1a73e8;
+    border-left: 5px solid #1a73e8;
+    padding-left: 12px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Règle qui insère l'icône Font Awesome via pseudo-élément */
+  h2::before {
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      color: #0b3d91;
+      font-size: 1.1em;
+      margin-right: 8px;
+  }
+  
+  /* Définition des icônes spécifiques pour chaque section (via code Unicode) */
+  .profile h2::before                 { content: "\f007"; } /* fa-user-circle (Profil) */
+  .left-col h2:nth-of-type(1)::before  { content: "\f120"; } /* fa-terminal - Compétences Techniques */
+  .left-col h2:nth-of-type(2)::before  { content: "\f0ac"; } /* fa-globe - Langues */
+  .center-col h2:nth-of-type(1)::before { content: "\f0b1"; } /* fa-briefcase - Expérience pro */
+  .center-col h2:nth-of-type(2)::before { content: "\f19d"; } /* fa-graduation-cap - Formation */
+  .right-col h2:nth-of-type(1)::before { content: "\f013"; } /* fa-cogs - Soft Skills */
+  .right-col h2:nth-of-type(2)::before { content: "\f004"; } /* fa-heart - Centres d'intérêt */
+  .right-col h2:nth-of-type(3)::before { content: "\f091"; } /* fa-trophy - Palmarès Sportif */
+  
+  /* ===========================
+     Articles : hover et ombre
+     =========================== */
+  article {
+    transition: all 0.3s ease;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  article:hover {
+    background: #e8f0fe;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* Plus d'ombre au survol */
+    transform: translateY(-3px);
+    border-left: 6px solid #1a73e8; /* Bordure plus épaisse */
+  }
+  
+  /* Titres des expériences */
+  article h3 {
+    margin-bottom: 5px;
+    color: #0b3d91;
+    font-size: 1.2em;
+  }
+  
+  /* Période et compétences acquises */
+  .periode {
+      font-style: italic;
+      color: #666;
+      font-size: 0.9em;
+  }
+  
+  .periode .far {
+      margin-right: 5px;
+      color: #1a73e8; /* Couleur à l'icône de calendrier */
+  }
+  
+  .competences-acquises {
+      margin-top: 10px;
+      padding: 5px 10px;
+      border-left: 3px solid #4285f4;
+      background-color: #f0f4ff;
+      font-size: 0.9em;
+  }
+  
+  /* =======================================
+     Listes et Puces (Soft Skills / Intérêts)
+     ======================================= */
+  ul {
+    padding-left: 0;
+    list-style-type: none; /* Désactiver les puces par défaut pour toutes les UL */
+  }
+  
+  /* Cible les Soft Skills et les listes générales (Centres d'intérêt) */
+  .soft-skills li, 
+  .right-col section ul:not(.hard-skills):not(.langues) li {
+      position: relative;
+      padding-left: 20px; 
+      margin-bottom: 8px;
+  }
+  
+  .soft-skills li::before, 
+  .right-col section ul:not(.hard-skills):not(.langues) li::before {
+      content: "\f058"; /* Icône de coche (fa-check-circle) */
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      color: #4285f4; /* Accent bleu pour l'icône */
+      position: absolute;
+      left: 0;
+      font-size: 0.9em;
+      top: 2px;
+  }
+  
+  /* ==========================================================
+     SOUS-TITRES DANS COMPÉTENCES & PALMARÈS
+     ========================================================== */
+  
+  /* Sous-titres à l'intérieur de Compétences Techniques (h3 dans left-col) */
+  .left-col h3 {
+      color: #4285f4; /* Bleu accent */
+      font-size: 1.1em;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      border-bottom: 1px dashed #dbe9fd;
+      padding-bottom: 3px;
+  }
+  
+  /* Style général pour les réalisations sportives */
+  .sport-realisation {
+      margin-bottom: 20px;
+  }
+  
+  .sport-realisation h3 {
+      color: #0b3d91;
+      font-size: 1.15em;
+      margin-top: 15px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #dbe9fd;
+      padding-bottom: 5px;
+  }
+  
+  /* Style des paragraphes de récompense */
+  .sport-realisation p {
+      font-size: 0.95em;
+      margin: 5px 0;
+      padding-left: 10px;
+  }
+  
+  /* Règle des icônes de médaille retirée */
+  
+  
+  /* ==========================================================
+     BARRES DE COMPÉTENCES
+     ========================================================== */
+  .hard-skills, .langues {
+      list-style: none; 
+      padding: 0;
+  }
+  
+  .hard-skills li, .langues li {
+      margin-bottom: 25px; 
+      font-weight: bold;
+      position: relative; 
+      padding-bottom: 15px; 
+      display: block;
+      line-height: 1.4;
+      padding-top: 5px; 
+  }
+  
+  /* Conteneur de la barre de progression (Barre grise de fond) */
+  .hard-skills li::after, .langues li::after {
+    content: "";
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    
+    display: block;
+    height: 8px; 
+    width: 100%;
+    background-color: #e0e0e0; 
+    border-radius: 4px;
+    
+    z-index: 1; 
+  }
+  
+  /* La progression réelle (Barre bleue) */
+  .hard-skills li::before, .langues li::before {
+    content: "";
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    
+    display: block;
+    height: 8px; 
+    background-color: #1a73e8;
+    border-radius: 4px;
+    
+    z-index: 2; 
+    
+    transition: width 1s ease-out; 
+  }
+  
+  /* ==========================================================
+     Définition des largeurs (niveaux) via l'attribut data-level
+     MODIFIEZ SEULEMENT LE POURCENTAGE (width: X%;)
+     ========================================================== */
+  /* Niveaux de Compétences Techniques (hard-skills) */
+  .hard-skills li[data-level="40"]::before { width: 40%; } /* JavaScript, Réseaux */
+  .hard-skills li[data-level="60"]::before { width: 60%; } /* Python, SQL */
+  .hard-skills li[data-level="90"]::before { width: 90%; } /* HTML / CSS */
+  
+  /* Niveaux de Langues (langues) */
+  .langues li[data-level="40"]::before { width: 40%; } /* Espagnol */
+  .langues li[data-level="100"]::before { width: 100%; } /* Anglais, Français */
+  
+  
+  /* ===========================
+     Footer
+     =========================== */
+  footer {
+    text-align: center;
+    margin: 30px 0;
+    color: #666;
+    font-size: 0.9em;
+    padding: 15px 0;
+    border-top: 2px solid #dbe9fd;
+    background: #f7f9fc;
+  }
+  
+  footer .dernier ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+  }
+  
+  footer .dernier img {
+    height: 40px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+  
+  footer .dernier img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* ===========================
+     Liens
+     =========================== */
+  a {
+    color: #1a73e8;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .projet a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 5px 10px;
+      border: 1px solid #1a73e8;
+      border-radius: 5px;
+      background-color: #fff;
+      transition: background-color 0.3s;
+  }
+  
+  .projet a:hover {
+      background-color: #1a73e8;
+      color: #fff;
+      text-decoration: none;
+  }
+  
+  .projet .technologies {
+      font-size: 0.9em;
+      color: #444;
+  }
+  
+  /* Responsive pour les petits écrans */
+  @media (max-width: 900px) {
+      .cv-container {
+          flex-direction: column;
+      }
+      .left-col, .center-col, .right-col {
+          flex: auto;
+      }
+      /* Supprimer le séparateur vertical en mode colonne */
+      .right-col {
+          border-left: none;
+          padding-left: 20px;
+          padding-right: 20px;
+      }
+  }
