@@ -19,13 +19,13 @@ L'objectif était de créer mon **CV sous forme de page web**, en HTML / CSS, et
 
 ## Contenu du CV
 
-- **Profil & motivation**
-- **Compétences techniques** : HTML / CSS, JavaScript, Python, SQL (MySQL), réseaux & Linux
-- **Langues** : anglais (langue maternelle), français, espagnol
-- **Expériences professionnelles** : agriculture, fromagerie, restauration, coaching de tennis
-- **Formation** : BUT Informatique, IUT Lyon 1
-- **Soft skills** et **centres d'intérêt**
-- **Palmarès sportif** : karaté et tennis
+- **Profil**
+- **Compétences techniques** : web (HTML / CSS, JavaScript, PHP, API), données (SQL / MySQL), Java, C++, Python, Git, Linux, systèmes embarqués
+- **Savoir-être** et **langues** : anglais (langue maternelle), français (bilingue), espagnol (B2)
+- **Expériences professionnelles** : industrie, agriculture, fromagerie, coaching de tennis, restauration
+- **Projets** : Kliento, Puissance 4 sur ESP32, site de restaurant, livre interactif en Qt
+- **Formation** : BUT Informatique (IUT Lyon 1), Bac STI2D
+- **Sport** : karaté et tennis
 
 ---
 
@@ -34,17 +34,18 @@ L'objectif était de créer mon **CV sous forme de page web**, en HTML / CSS, et
 | Fichier | Rôle |
 |---|---|
 | `index.html` | Contenu du CV |
-| `style.css` | Mise en page et styles |
-| Images | Photo et logos des entreprises |
+| `style.css` | Mise en page, thème pétrole / menthe, version mobile et version imprimable |
+| `photo.jpg` | Photo de profil |
 
-Icônes : [Font Awesome](https://fontawesome.com/).
+- Mise en page en **CSS Grid** (colonne latérale + contenu), responsive sur mobile
+- Bouton **Télécharger en PDF** : feuille de style d'impression qui fait tenir le CV sur une page A4
+- Typographies : Space Grotesk, Manrope et JetBrains Mono (Google Fonts)
 
 ---
 
 ## Suite du projet
 
 - version anglaise du CV
-- bouton de téléchargement en PDF
 - mise à jour avec les nouveaux projets et expériences
 
 ---
