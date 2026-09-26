@@ -29,15 +29,22 @@ L'objectif était de créer mon **CV sous forme de page web**, en HTML / CSS, et
 
 ---
 
+## Structure du projet
+
+```
+CV-Tristan-Muller/
+├── index.html      # contenu du CV (colonne gauche + colonne droite)
+├── css/
+│   └── style.css   # styles, version mobile et version imprimable (sommaire en haut du fichier)
+└── assets/         # photo et favicon
+```
+
+---
+
 ## Implémentation
 
-| Fichier | Rôle |
-|---|---|
-| `index.html` | Contenu du CV |
-| `style.css` | Mise en page, thème pétrole / menthe, version mobile et version imprimable |
-| `photo.jpg` | Photo de profil |
-
 - Mise en page en **CSS Grid** (colonne latérale + contenu), responsive sur mobile
+- Même charte graphique que le [portfolio](https://tristanmuller007.github.io/Portfolio/) : pétrole / menthe
 - Bouton **Télécharger en PDF** : feuille de style d'impression qui fait tenir le CV sur une page A4
 - Typographies : Space Grotesk, Manrope et JetBrains Mono (Google Fonts)
 

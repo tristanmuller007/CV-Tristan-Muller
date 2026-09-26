@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CV - Tristan Muller</title>
-<meta name="description" content="CV de Tristan Muller, étudiant en BUT Informatique à l'IUT Lyon 1.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%238FFFE0'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' text-anchor='middle' fill='%2303313A'%3ETM%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV - Tristan Muller</title>
+  <meta name="description" content="CV de Tristan Muller, étudiant en BUT Informatique à l'IUT Lyon 1.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Mêmes typographies que le portfolio -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<!-- Barre au-dessus du CV (masquée à l'impression) -->
 <div class="toolbar">
-  <a href="https://tristanmuller007.github.io/Portfolio/" class="tb-link">← Portfolio</a>
-  <button class="tb-btn" onclick="window.print()">Télécharger en PDF</button>
+  <a href="https://tristanmuller007.github.io/Portfolio/" class="toolbar__link">← Portfolio</a>
+  <button class="toolbar__btn" type="button" onclick="window.print()">Télécharger en PDF</button>
 </div>
 
 <main class="page">
 
-  <!-- COLONNE GAUCHE -->
+  <!-- ============================ COLONNE GAUCHE ============================ -->
   <aside class="side">
-    <img class="photo" src="photo.jpg" alt="Photo de Tristan Muller">
+    <img class="photo" src="assets/photo.jpg" alt="Photo de Tristan Muller">
 
     <section>
       <h2>Contact</h2>
       <ul class="contact">
-        <li><span class="ic">@</span><a href="mailto:tristan@familymuller.me">tristan@familymuller.me</a></li>
-        <li><span class="ic">☎</span><a href="tel:+33749498137">07 49 49 81 37</a></li>
-        <li><span class="ic">⌂</span>Bourg-en-Bresse (01)</li>
-        <li><span class="ic">▣</span><a href="https://github.com/tristanmuller007" target="_blank" rel="noopener">github.com/tristanmuller007</a></li>
-        <li><span class="ic">◎</span><a href="https://tristanmuller007.github.io/Portfolio/" target="_blank" rel="noopener">Portfolio en ligne</a></li>
-        <li><span class="ic">⛟</span>Permis B · véhiculé</li>
+        <li><span class="contact__icon" aria-hidden="true">@</span><a href="mailto:tristan@familymuller.me">tristan@familymuller.me</a></li>
+        <li><span class="contact__icon" aria-hidden="true">☎</span><a href="tel:+33749498137">07 49 49 81 37</a></li>
+        <li><span class="contact__icon" aria-hidden="true">⌂</span>Bourg-en-Bresse (01)</li>
+        <li><span class="contact__icon" aria-hidden="true">▣</span><a href="https://github.com/tristanmuller007" target="_blank" rel="noopener">github.com/tristanmuller007</a></li>
+        <li><span class="contact__icon" aria-hidden="true">◎</span><a href="https://tristanmuller007.github.io/Portfolio/" target="_blank" rel="noopener">Portfolio en ligne</a></li>
+        <li><span class="contact__icon" aria-hidden="true">⛟</span>Permis B · véhiculé</li>
       </ul>
     </section>
 
@@ -60,24 +64,24 @@
 
     <section>
       <h2>Langues</h2>
-      <div class="lang"><b>Anglais</b><span>Langue maternelle</span><i style="--w:100%"></i></div>
-      <div class="lang"><b>Français</b><span>Bilingue</span><i style="--w:100%"></i></div>
-      <div class="lang"><b>Espagnol</b><span>B2</span><i style="--w:62%"></i></div>
+      <div class="lang"><b>Anglais</b><span>Langue maternelle</span><i style="--level:100%"></i></div>
+      <div class="lang"><b>Français</b><span>Bilingue</span><i style="--level:100%"></i></div>
+      <div class="lang"><b>Espagnol</b><span>B2</span><i style="--level:62%"></i></div>
     </section>
 
     <section>
       <h2>Centres d'intérêt</h2>
-      <p class="sub-h">Karaté</p>
+      <p class="subtitle">Karaté</p>
       <ul class="dots">
         <li>Champion d'Afrique 2018</li>
         <li>Champion d'Afrique du Sud 2015 - 2020</li>
         <li>Mondiaux en Suède 2019</li>
       </ul>
-      <p class="sub-h">Tennis</p>
+      <p class="subtitle">Tennis</p>
       <ul class="dots">
         <li>Champion d'Afrique du Sud 2016 - 2019</li>
       </ul>
-      <p class="sub-h">Loisirs</p>
+      <p class="subtitle">Loisirs</p>
       <ul class="dots">
         <li>Handball en compétition</li>
         <li>Associations sportives</li>
@@ -88,17 +92,17 @@
 
     <section>
       <h2>Formation</h2>
-      <div class="s-edu"><b>BUT Informatique</b><span>IUT Lyon 1 · Bourg-en-Bresse</span><span>2025 - 2028 · Web, bases de données, tests</span></div>
-      <div class="s-edu"><b>Bac STI2D</b><span>Lycée de la Plaine de l'Ain, Ambérieu-en-Bugey</span><span>2025</span></div>
+      <div class="school"><b>BUT Informatique</b><span>IUT Lyon 1 · Bourg-en-Bresse</span><span>2025 - 2028 · Web, bases de données, tests</span></div>
+      <div class="school"><b>Bac STI2D</b><span>Lycée de la Plaine de l'Ain, Ambérieu-en-Bugey</span><span>2025</span></div>
     </section>
   </aside>
 
-  <!-- COLONNE DROITE -->
+  <!-- ============================ COLONNE DROITE ============================ -->
   <div class="main">
     <header class="head">
       <h1>Tristan <span>Muller</span></h1>
-      <p class="sub">Étudiant en BUT Informatique · IUT Lyon 1</p>
-      <p class="pill"><i></i>Disponible pour un stage · 12 avril - 18 juin 2027</p>
+      <p class="head__sub">Étudiant en BUT Informatique · IUT Lyon 1</p>
+      <p class="head__status"><i></i>Disponible pour un stage · 12 avril - 18 juin 2027</p>
     </header>
 
     <section>
@@ -110,8 +114,8 @@
       <h2>Expérience professionnelle</h2>
 
       <article class="job">
-        <div class="job-top"><h3>Opérateur de production <em>(intérim)</em></h3><span class="date">Juillet 2026</span></div>
-        <p class="where">Caps Packaging · flacons plastique · Ain</p>
+        <div class="job__top"><h3>Opérateur de production <em>(intérim)</em></h3><span class="date">Juillet 2026</span></div>
+        <p class="job__where">Caps Packaging · flacons plastique · Ain</p>
         <ul>
           <li>Conduite de plusieurs souffleuses en autonomie en milieu industriel.</li>
           <li>Contrôle qualité toutes les 2 à 4 h et suivi de la production.</li>
@@ -119,8 +123,8 @@
       </article>
 
       <article class="job">
-        <div class="job-top"><h3>Ouvrier agricole polyvalent</h3><span class="date">Été 2025</span></div>
-        <p class="where">D. Gutzwiller Group · Domaine du Grand Kohlberg, Alsace</p>
+        <div class="job__top"><h3>Ouvrier agricole polyvalent</h3><span class="date">Été 2025</span></div>
+        <p class="job__where">D. Gutzwiller Group · Domaine du Grand Kohlberg, Alsace</p>
         <ul>
           <li>Entretien de plus de 60 hectares en autonomie.</li>
           <li>Conduite de tracteurs et maintenance préventive des machines.</li>
@@ -128,8 +132,8 @@
       </article>
 
       <article class="job">
-        <div class="job-top"><h3>Opérateur en affinerie de fromages</h3><span class="date">Été 2023</span></div>
-        <p class="where">Fromagerie Antony · Vieux-Ferrette, Alsace</p>
+        <div class="job__top"><h3>Opérateur en affinerie de fromages</h3><span class="date">Été 2023</span></div>
+        <p class="job__where">Fromagerie Antony · Vieux-Ferrette, Alsace</p>
         <ul>
           <li>Contrôle qualité des produits selon des normes strictes.</li>
           <li>Préparation et expédition des commandes clients.</li>
@@ -137,8 +141,8 @@
       </article>
 
       <article class="job">
-        <div class="job-top"><h3>Coach de tennis</h3><span class="date">2019 - 2021</span></div>
-        <p class="where">MTG Tennis · Le Cap, Afrique du Sud</p>
+        <div class="job__top"><h3>Coach de tennis</h3><span class="date">2019 - 2021</span></div>
+        <p class="job__where">MTG Tennis · Le Cap, Afrique du Sud</p>
         <ul>
           <li>Encadrement de 30 jeunes par saison, avec des explications adaptées.</li>
           <li>Organisation et animation des entraînements hebdomadaires.</li>
@@ -146,8 +150,8 @@
       </article>
 
       <article class="job">
-        <div class="job-top"><h3>Serveur</h3><span class="date">Étés 2020 et 2021</span></div>
-        <p class="where">Sótano Seafood &amp; Sushi · Le Cap, Afrique du Sud</p>
+        <div class="job__top"><h3>Serveur</h3><span class="date">Étés 2020 et 2021</span></div>
+        <p class="job__where">Sótano Seafood &amp; Sushi · Le Cap, Afrique du Sud</p>
         <ul>
           <li>Accueil, service et gestion des commandes dans un restaurant très fréquenté.</li>
         </ul>
@@ -157,10 +161,10 @@
     <section>
       <h2>Projets</h2>
       <div class="projects">
-        <div class="proj"><b>Kliento</b><span class="tag">En cours</span><p>Application métier de gestion des clients et des factures : portail client sécurisé, modèle de données, API externes (PHP, SQL).</p></div>
-        <div class="proj"><b>Puissance 4 en Wi-Fi</b><span class="tag">ESP32</span><p>Deux cartes ESP32 avec matrices LED : communication ESP-NOW, gestion des tours et détection de victoire.</p></div>
-        <div class="proj"><b>Site de restaurant</b><span class="tag">HTML / CSS</span><p>Analyse du besoin client, arborescence et intégration d'un site responsive de 11 pages.</p></div>
-        <div class="proj"><b>Livre interactif</b><span class="tag">C++ / Qt</span><p>Application de bureau pour écrire et jouer un livre dont vous êtes le héros, avec export en site web.</p></div>
+        <div class="project"><b>Kliento</b><span class="tag">En cours</span><p>Application métier de gestion des clients et des factures : portail client sécurisé, modèle de données, API externes (PHP, SQL).</p></div>
+        <div class="project"><b>Puissance 4 en Wi-Fi</b><span class="tag">ESP32</span><p>Deux cartes ESP32 avec matrices LED : communication ESP-NOW, gestion des tours et détection de victoire.</p></div>
+        <div class="project"><b>Site de restaurant</b><span class="tag">HTML / CSS</span><p>Analyse du besoin client, arborescence et intégration d'un site responsive de 11 pages.</p></div>
+        <div class="project"><b>Livre interactif</b><span class="tag">C++ / Qt</span><p>Application de bureau pour écrire et jouer un livre dont vous êtes le héros, avec export en site web.</p></div>
       </div>
     </section>
 
