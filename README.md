@@ -36,6 +36,8 @@ CV-Tristan-Muller/
 ├── index.html      # contenu du CV (colonne gauche + colonne droite)
 ├── css/
 │   └── style.css   # styles, version mobile et version imprimable (sommaire en haut du fichier)
+├── js/
+│   └── i18n.js     # version anglaise : textes EN et bouton FR / EN
 └── assets/         # photo et favicon
 ```
 
@@ -46,13 +48,13 @@ CV-Tristan-Muller/
 - Mise en page en **CSS Grid** (colonne latérale + contenu), responsive sur mobile
 - Même charte graphique que le [portfolio](https://tristanmuller007.github.io/Portfolio/) : pétrole / menthe
 - Bouton **Télécharger en PDF** : feuille de style d'impression qui fait tenir le CV sur une page A4
+- **Bilingue français / anglais** (bouton FR / EN) ; le PDF sort dans la langue affichée, lien direct en anglais avec `?lang=en`
 - Typographies : Space Grotesk, Manrope et JetBrains Mono (Google Fonts)
 
 ---
 
 ## Suite du projet
 
-- version anglaise du CV
 - mise à jour avec les nouveaux projets et expériences
 
 ---

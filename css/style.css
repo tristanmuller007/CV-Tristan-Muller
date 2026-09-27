@@ -84,6 +84,44 @@ ul { list-style: none; }
 }
 .toolbar__btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(143, 255, 224, .3); }
 
+.toolbar__actions { display: flex; align-items: center; gap: 12px; }
+
+/* Sélecteur de langue FR / EN (identique au portfolio) */
+.lang-switch {
+  position: relative;
+  display: flex;
+  padding: 3px;
+  border: 1px solid rgba(143, 255, 224, .25);
+  border-radius: 999px;
+}
+.lang-switch::before { /* pastille qui glisse sous la langue active */
+  content: "";
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  width: calc(50% - 3px);
+  border-radius: 999px;
+  background: var(--mint);
+  transition: transform .3s cubic-bezier(.2, .8, .2, 1);
+}
+html[lang="en"] .lang-switch::before { transform: translateX(100%); }
+.lang-switch button {
+  position: relative;
+  width: 38px;
+  padding: 7px 0;
+  border: 0;
+  background: none;
+  color: rgba(234, 251, 246, .7);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: .06em;
+  cursor: pointer;
+  transition: color .2s;
+}
+.lang-switch button:hover { color: #fff; }
+.lang-switch button[aria-pressed="true"] { color: var(--petrol); }
+
 
 /* =====================================================================
    4. PAGE
