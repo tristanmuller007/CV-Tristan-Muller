@@ -65,7 +65,7 @@
     "edu.title": "Education",
     "edu.but": "Bachelor's in Computer Science (BUT)",
     "edu.but.text": "2025 - 2028 · Web, databases, testing",
-    "edu.bac": "Baccalaureate, Engineering &amp; Technology (STI2D)",
+    "edu.bac": "High School Diploma, Engineering &amp; Technology (STI2D)",
     "edu.bac.school": "Lycée de la Plaine de l'Ain, Ambérieu-en-Bugey, France",
 
     /* En-tête */
