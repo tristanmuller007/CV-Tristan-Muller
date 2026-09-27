@@ -9,6 +9,7 @@
    - Ce fichier ne contient que l'anglais : le français est relu dans la
      page au chargement, il n'est donc écrit qu'à un seul endroit.
    - Le choix est mémorisé (localStorage) et transmis au portfolio via ?lang=en.
+   - En anglais, les blocs sont réorganisés (voir LAYOUT plus bas).
    - Le PDF (bouton « Télécharger ») sort dans la langue affichée.
    ===================================================================== */
 
@@ -59,18 +60,18 @@
     "int.k3": "World Championships, Sweden 2019",
     "int.t1": "South African Champion 2016 - 2019",
     "int.other": "Other interests",
-    "int.o1": "Competitive handball",
-    "int.o2": "Sports associations",
-    "int.o3": "AI and automation",
-    "int.o4": "Video games",
+    "int.o1": "Competitive handball, sports associations",
+    "int.o2": "AI &amp; automation, video games",
+    "int.o3": "", // regroupés avec les lignes au-dessus en anglais
+    "int.o4": "",
 
     /* Formation */
     "edu.title": "Education",
     "edu.but": "BUT Informatique - 3-year CS Bachelor's",
-    "edu.but.school": "Claude Bernard University (IUT Lyon 1), France",
+    "edu.but.school": "Claude Bernard University (IUT Lyon 1)",
     "edu.but.text": "2025 - 2028 · Web, databases, testing",
-    "edu.bac": "Baccalauréat STI2D - French high-school diploma (engineering &amp; technology)",
-    "edu.bac.school": "Lycée de la Plaine de l'Ain, France",
+    "edu.bac": "Baccalauréat STI2D",
+    "edu.bac.school": "French high-school diploma, engineering &amp; technology · Lycée de la Plaine de l'Ain",
 
     /* En-tête */
     "head.sub": "Computer Science student · IUT Lyon 1, France",
@@ -78,7 +79,7 @@
 
     /* Profil */
     "profile.title": "Profile &amp; motivation",
-    "profile.text": "Former <strong>African Karate Champion</strong>: I bring the <strong>discipline</strong> and <strong>precision</strong> of top-level sport to everything I do. As a Computer Science student, I build <strong>complete web applications</strong>, from database to interface. Now looking for an internship.",
+    "profile.text": "Former <strong>African Karate Champion</strong>: I bring the <strong>discipline</strong> and <strong>precision</strong> of top-level sport to everything I do. As a Computer Science student, I build <strong>complete web applications</strong>, from database to interface.",
 
     /* Expérience professionnelle */
     "exp.title": "Professional experience",
@@ -124,6 +125,31 @@
     /* Textes alternatifs */
     "a11y.photo": "Photo of Tristan Muller"
   };
+
+  /* ---------- Ordre des blocs selon la langue ----------
+     Le CV anglais suit la mise en page du CV anglais envoyé aux recruteurs :
+     profil et formation à gauche, projets avant l'expérience à droite.
+     Chaque bloc est repéré dans index.html par data-block="nom". */
+  const LAYOUT = {
+    fr: {
+      side: ['contact', 'skills-tech', 'skills-soft', 'languages', 'interests', 'education'],
+      main: ['profile', 'experience', 'projects'],
+    },
+    en: {
+      side: ['contact', 'profile', 'education', 'skills-tech', 'skills-soft', 'languages', 'interests'],
+      main: ['projects', 'experience'],
+    },
+  };
+
+  function applyLayout(lang) {
+    const columns = { side: document.querySelector('.side'), main: document.querySelector('.main') };
+    Object.entries(LAYOUT[lang]).forEach(([column, blocks]) => {
+      blocks.forEach((name) => {
+        // appendChild déplace le bloc : la photo et l'en-tête restent en premier
+        columns[column].appendChild(document.querySelector(`[data-block="${name}"]`));
+      });
+    });
+  }
 
   /* ---------- Métadonnées de la page ---------- */
   const META = {
@@ -179,6 +205,7 @@
       });
     });
 
+    applyLayout(lang);
     document.documentElement.lang = lang;
     document.title = META[lang].title;
     document.querySelector('meta[name="description"]').content = META[lang].description;

@@ -307,6 +307,13 @@ html[lang="en"] .lang-switch::before { transform: translateX(100%); }
 .profile        { color: var(--text); font-size: 14.5px; line-height: 1.65; }
 .profile strong { color: var(--petrol); }
 
+/* Une ligne vide dans une langue est masquée (ex. loisirs regroupés en anglais) */
+.dots li:empty { display: none; }
+
+/* Version anglaise : le profil passe dans la colonne de gauche (voir js/i18n.js) */
+.side .profile        { color: var(--side-text); font-size: 13px; line-height: 1.55; }
+.side .profile strong { color: #fff; }
+
 /* Expériences : frise verticale */
 .job {
   position: relative;
