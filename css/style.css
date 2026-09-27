@@ -352,10 +352,12 @@ html[lang="en"] .lang-switch::before { transform: translateX(100%); }
   border-radius: 12px;
   background: linear-gradient(180deg, #FBFEFD, #F4FAF9);
 }
-.project b { color: var(--petrol); font-family: var(--font-display); font-size: 14.5px; }
+.project b { display: block; color: var(--petrol); font-family: var(--font-display); font-size: 14.5px; }
 .project p { margin-top: 6px; color: #3E575D; font-size: 12.8px; line-height: 1.5; }
-.tag {
-  margin-left: 8px;
+.tag { /* sous le titre du projet, sur une seule ligne */
+  display: inline-block;
+  margin-top: 4px;
+  white-space: nowrap;
   padding: 2px 7px;
   border-radius: 5px;
   background: #E6FBF5;
