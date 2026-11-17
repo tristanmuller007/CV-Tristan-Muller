@@ -100,7 +100,7 @@
     "j3.l2": "Matured the cheeses, then prepared and shipped customer orders.",
     "j4.title": "Tennis Coach",
     "j4.where": "MTG Tennis · Cape Town, South Africa",
-    "j4.l1": "Coached and trained over 30 young players per season.",
+    "j4.l1": "Coached 30 young players per season.",
     "j4.l2": "Organised and ran the weekly training sessions.",
     "j5.title": "Waiter",
     "j5.date": "Summers 2020 and 2021",
